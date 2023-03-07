@@ -1,0 +1,236 @@
+/* General cleanups and adjustments */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-text-color: hsl(240, 100%, 5%);
+    --secondary-text-color: hsl(236, 13%, 42%);
+}
+
+body {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 18px;
+    background-color: #100f15;
+    min-height: 100vh;
+    padding-top: 1px;
+}
+
+/* Wrapping the whole content around */
+
+.wrapper-container {
+    margin: 5em auto;
+    width: 25em;
+}
+/* Header above the app */
+
+h1 {
+    margin: 0 auto 1em auto;
+    color: #7c7b84;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Generated password display area */
+.generated-password {
+    display: flex;
+    justify-content: space-between;
+    background-color: #24232b;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.copy-icon-container {
+    margin: auto 0;
+}
+
+#copy-button:hover {
+    cursor: pointer;
+}
+
+.copy-icon-container img {
+    min-width: 1.2em;
+}
+
+.password-container {
+    min-height: 2.6em;
+}
+
+.generated-password p {
+    font-size: 2em;
+    font-weight: 700;
+    color: #ffffff38;
+}
+
+/* The form */
+.form-container {
+    background-color: #24232b;
+    padding: 1.5em;
+}
+
+/* Length display area and the slider */
+.length-display-area {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.length-display-area label {
+    font-size: 1em;
+    color: #ffffff;
+}
+
+.length-display-area p {
+    font-size: 1em;
+    color: #a4ffaf;
+}
+
+.range-input-container {
+    padding: 0 1em;
+    margin-bottom: 1.5em;
+}
+
+#length { /* This is the slider */
+  -webkit-appearance: none;
+  margin-right: 15px;
+  background: #100f15;
+  border-radius: 5px;
+  background-image: linear-gradient(#a4ffaf, #a4ffaf);
+  background-size: 70% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 0.5em;
+}
+
+/* Range thumb */
+#length::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #000000;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 5em;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+#length::-webkit-slider-thumb:hover {
+    background: #100f15;
+    border: 2px solid #a4ffaf;
+}
+
+
+/* Range thumb for Firefox */
+#length::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 1em;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+/* Checkboxes */
+.selectors {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.selector-item {
+    margin-bottom: 1em;
+}
+
+.selector-item label {
+    margin-left: 1em;
+    color: #ffffff;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    border: 1px solid white;
+    width: 1em;
+    height: 1em;
+}
+
+input[type="checkbox"]:hover {
+    border: 1px solid #a4ffaf;
+}
+
+input[type=checkbox]:checked {
+    background-color: #a4ffaf;
+    border: 1px solid #a4ffaf;
+}
+
+input[type="checkbox"]:checked {
+    appearance: checkbox;
+    accent-color: #a4ffaf;
+}
+
+/* Password strength display area */
+.strength-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: #100f15;
+    margin-bottom: 1em;
+}
+
+.strength-label p {
+    color: #7c7b84;
+    font-size: 1.1em;
+}
+
+.strength-display {
+    display: flex;
+    justify-content: space-between;
+    width: 9em;
+
+}
+
+.strength-rating p {
+    color: #ffffff;
+    font-size: 1.25em;
+}
+
+.strength-visual {
+    display: flex;
+    justify-content: space-between;
+    width: 3em;
+}
+
+.strength-visual > div {
+    height: 1.5em;
+    width: 0.5em;
+}
+
+.strength-scale-div-border {
+    border: 1.5px solid #ffffff;
+}
+
+/* Password generate button */
+.generate-button {
+    width: 100%;
+    padding: 2em;
+    background-color: #a4ffaf;
+    color: #100f15;
+    font-weight: 700;
+    border-color: #a4ffaf;
+}
+
+.generate-button span {
+    margin-left: 1em;
+}
+
+.generate-button:hover {
+    background-color: #24232b;
+    border-color: #a4ffaf;
+    color: #a4ffaf;
+    cursor: pointer;
+}
+
+
+

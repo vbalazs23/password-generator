@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700;800&display=swap" rel="stylesheet">
+
+<title>Frontend Mentor | Password Generator</title>
+
+</head>
+
+<body>
+<div class="wrapper-container">
+    <h1>Password Generator</h1>
+    <div class="generated-password">
+        <div class="password-container">
+        <p class="password-display">P4$5W0rD!</p>
+    </div>
+    <div class="copy-icon-container">
+        <img id="copy-button" src="media/copy.svg" alt="">
+    </div>
+    </div>
+    <div class="form-container">
+
+    <form id="password-form" action="">
+
+        <div class="length-display-area">
+            <div class="length-label-container">
+                <label for="length">Character Length</label>
+            </div>
+            <div class="length-number-container">
+                <p class="password-length-number"></p>
+            </div>
+            
+        </div>
+
+        <div class="range-input-container">
+            <input type="range" id="length" min="4" max="16" oninput="rangeValueUpdater(this.value)">
+            </div>
+
+        <div class="selectors">
+            <div class="selector-item">
+                <input type="checkbox" id="uppercase">
+                <label for="uppercase">Include Uppercase Letters</label>
+            </div>
+
+            <div class="selector-item">
+                <input type="checkbox" id="lowercase">
+                <label for="lowercase">Include Lowercase Letters</label>
+            </div>
+        
+            <div class="selector-item">
+                <input type="checkbox" id="numbers">
+                <label for="numbers">Include Numbers</label>
+            </div>  
+
+            <div class="selector-item">
+                <input type="checkbox" id="special-characters">
+                <label for="special-characters">Include Symbols</label>
+            </div>
+        </div>
+        <div class="strength-container">
+            <div class="strength-label">
+                <p>STRENGTH</p>
+            </div>
+            <div class="strength-display">
+                <div class="strength-rating">
+                    <p id="rating-word"></p>
+                </div>
+                <div class="strength-visual">
+                    <div class="weak strength-scale-div-border"></div>
+                    <div class="medium-one strength-scale-div-border"></div>
+                    <div class="medium-two strength-scale-div-border"></div>
+                    <div class="strong strength-scale-div-border"></div>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <button class="generate-button">GENERATE <span>&rarr;</span></button>
+    </form>
+</div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
